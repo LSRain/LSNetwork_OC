@@ -58,6 +58,7 @@
 		512DF20F1DF4001F009A5B6E /* LSNetwork_OC */ = {
 			isa = PBXGroup;
 			children = (
+				512DF2271DF40070009A5B6E /* LSNetwork_OC */,
 				512DF2131DF4001F009A5B6E /* AppDelegate.h */,
 				512DF2141DF4001F009A5B6E /* AppDelegate.m */,
 				512DF2161DF4001F009A5B6E /* ViewController.h */,
@@ -77,6 +78,13 @@
 				512DF2111DF4001F009A5B6E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		512DF2271DF40070009A5B6E /* LSNetwork_OC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LSNetwork_OC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
