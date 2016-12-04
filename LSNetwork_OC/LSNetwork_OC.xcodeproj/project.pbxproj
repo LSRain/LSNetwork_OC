@@ -13,6 +13,7 @@
 		512DF21B1DF4001F009A5B6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 512DF2191DF4001F009A5B6E /* Main.storyboard */; };
 		512DF21D1DF4001F009A5B6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 512DF21C1DF4001F009A5B6E /* Assets.xcassets */; };
 		512DF2201DF4001F009A5B6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 512DF21E1DF4001F009A5B6E /* LaunchScreen.storyboard */; };
+		512DF22A1DF40170009A5B6E /* LSNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 512DF2291DF40170009A5B6E /* LSNetworkTools.m */; };
 		9C01C9E55967C1FF0888F650 /* libPods-LSNetwork_OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CBCDD20FB7668C5FE23EB1 /* libPods-LSNetwork_OC.a */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,8 @@
 		512DF21C1DF4001F009A5B6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		512DF21F1DF4001F009A5B6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		512DF2211DF4001F009A5B6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		512DF2281DF40170009A5B6E /* LSNetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSNetworkTools.h; sourceTree = "<group>"; };
+		512DF2291DF40170009A5B6E /* LSNetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSNetworkTools.m; sourceTree = "<group>"; };
 		A8CBCDD20FB7668C5FE23EB1 /* libPods-LSNetwork_OC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LSNetwork_OC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,6 +110,8 @@
 		512DF2271DF40070009A5B6E /* LSNetwork_OC */ = {
 			isa = PBXGroup;
 			children = (
+				512DF2281DF40170009A5B6E /* LSNetworkTools.h */,
+				512DF2291DF40170009A5B6E /* LSNetworkTools.m */,
 			);
 			path = LSNetwork_OC;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 		512DF2051DF4001F009A5B6E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LS;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = lsrain;
 				TargetAttributes = {
@@ -234,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				512DF2181DF4001F009A5B6E /* ViewController.m in Sources */,
+				512DF22A1DF40170009A5B6E /* LSNetworkTools.m in Sources */,
 				512DF2151DF4001F009A5B6E /* AppDelegate.m in Sources */,
 				512DF2121DF4001F009A5B6E /* main.m in Sources */,
 			);
@@ -357,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LSNetwork_OC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lsrain.LSNetwork-OC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -369,6 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LSNetwork_OC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lsrain.LSNetwork-OC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
