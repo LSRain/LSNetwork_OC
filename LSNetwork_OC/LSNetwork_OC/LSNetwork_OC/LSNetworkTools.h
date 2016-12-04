@@ -29,4 +29,13 @@ typedef NS_ENUM(NSUInteger, LSMethod) {
  */
 - (void)request:(LSMethod)method urlString:(NSString *)urlString parameters:(id)parameters success:(void(^)(id responseObject))success failed:(void(^)(NSError *error))failed;
 
+/**
+ 单独用以请求天气的接口
+
+ @param cityName 城市名 - 目前支持`北京`
+ @param success 成功回调
+ @param failed 失败回调
+ */
+- (void)loadWeather:(NSString *)cityName success:(void(^)(id responseObject))success failed:(void(^)(NSError *error))failed;
+
 @end

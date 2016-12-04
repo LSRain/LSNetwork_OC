@@ -37,4 +37,13 @@
     }];
 }
 
+- (void)loadWeather:(NSString *)cityName success:(void (^)(id))success failed:(void (^)(NSError *))failed{
+    NSDictionary *dic = @{@"name": cityName};
+    if ([[dic objectForKey:@"name"] isEqual:@"北京"]) {
+        [self request:GET urlString:@"http://www.weather.com.cn/data/sk/101010100.html" parameters:nil success:success failed:failed];
+    }else{
+        NSLog(@"未开放该地区的天气接口");
+    }
+}
+
 @end
