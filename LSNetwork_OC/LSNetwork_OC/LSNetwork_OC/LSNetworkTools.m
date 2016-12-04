@@ -15,8 +15,26 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [self new];
+        instance.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
     });
     return instance;
+}
+
+- (void)request:(LSMethod)method urlString:(NSString *)urlString parameters:(id)parameters success:(void(^)(id responseObject))success failed:(void(^)(NSError *error))failed{
+    if (method == GET){
+        [self GET:urlString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            success(responseObject);
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            failed(error);
+        }];
+        return;
+    }
+    /// POST
+    [self POST:urlString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failed(error);
+    }];
 }
 
 @end

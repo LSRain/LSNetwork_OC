@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "LSNetworkTools.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [[LSNetworkTools sharedTools] request:GET urlString:@"http://www.weather.com.cn/data/sk/101010100.html" parameters:nil success:^(id responseObject) {
+        NSLog(@"%@", responseObject);
+    } failed:^(NSError *error) {
+        NSLog(@"%@", error);
+    }];
 }
 
 
